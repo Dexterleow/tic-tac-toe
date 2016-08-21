@@ -1,3 +1,59 @@
+
+/*Code from: http://jsfiddle.net/zG3pm/4/*/
+
 h1 {
-  color: purple;
+  text-align: center;
 }
+
+#tttTable
+{
+  width: 600px;
+  height: 600px;
+  border: 1px solid black;
+}
+
+.cell
+{
+  width: 200px;
+  height: 200px;
+  border: 1px solid #CCC;
+  text-align: center;
+  font-weight: bold;
+  font-size: 4em;
+}
+
+#newGameBtn
+{
+  margin-left: 46%;
+}
+
+#playersTurn
+{
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.1em;
+  height: 10px;
+}
+
+#outer
+{
+  width: 600px;
+}
+
+#winnerIs
+{
+  background-color: #EEE;
+  text-align: center;
+  font-weight: bold;
+  font-size: 5em;
+  width:700px;
+  height:100px;
+  position:fixed;
+  top:50%;
+  left:50%;
+  margin-top:-150px;
+  margin-left:-350px;
+  display: none;
+}
+
+/*Code from: http://jsfiddle.net/zG3pm/4/*/
