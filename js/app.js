@@ -1,16 +1,17 @@
 // Code from: http://jsfiddle.net/zG3pm/4/
 
-// My code. A Simple IF statement if computer detects that there are two X in a
+// (1)My code. A Simple IF statement if computer detects that there are two X in a
 //row and will place it O in the empty cell above it to block the player from winning.
 // var computerMove = function () {
 // if (cell1x1 == "" && (cell1x2 == "x" & cell1x3 ="x")) || (cell2x2 == "x" & cell3x3 ="x")) || (cell2x1 == "x" & cell3x1 ="x")) {
 // cell1x1.inner.HTML = "O";
 // turn = 0;
 // } else
+//..... and so on, and all other permutation need to be factored in.
 //
-//
+//(2) for the computer to move.
+// it needs to place an O in one of the cell in the board randomly when one of the cell is clicked.
 // }
-
 //
 
 
