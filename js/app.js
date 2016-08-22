@@ -1,3 +1,4 @@
+
 console.log('Hello Frontend!');
 
 // var player1 = "x";
@@ -26,7 +27,7 @@ console.log('Hello Frontend!');
 // }
 //
 
-// 
+//
 // function clickCheck() = {
 // if (cell.innerHTML ==="X" || cell.innerHTML === "O") {
 //     window.alert("You have clicked on here before.");
@@ -68,14 +69,6 @@ document.getElementById("cell7").onclick = click;
 document.getElementById("cell8").onclick = click;
 document.getElementById("cell9").onclick = click;
 
-
-
-
-
-
-
-//
-//
 // function gameOver () = {
 //
 // if moves = 9, games end
