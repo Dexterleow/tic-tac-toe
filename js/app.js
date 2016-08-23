@@ -1,5 +1,91 @@
-
 console.log('Hello Frontend!');
+
+// Codes from David
+gridArray = [ 0,0,0,
+              0,0,0,
+              0,0,0]
+
+// Understanding Game Logic (Use an if else to wrap for vs human or com)
+var currentPlayer = 'x'
+
+function playerMove (ab) {
+  if (ab.target.textContent === '' && currentPlayer === 'x') {
+      //this equals to false
+    ab.target.textContent = 'x' //can I change ev to something else like ab?
+    var i = ab.target.id
+    gridArray[i] = 'x'
+    checkWinner()
+    isGameOver()
+
+    currentPlayer = 'o'
+  } else if (ab.target.textContent === '' && currentPlayer === 'o') {
+    ab.target.textContent = 'o'
+    var i = ab.target.id
+    gridArray[i] = 'o'
+    checkWinner()
+    isGameOver()
+
+    currentPlayer = 'x'
+  }
+  console.log(gridArray);
+}
+
+
+function checkWinner() {
+  if        (gridArray[0] === gridArray[1] && gridArray[1] === gridArray[2]) {
+    winner = gridArray[0]
+  } else if (gridArray[3] === gridArray[4] && gridArray[4] === gridArray[5]) {
+    winner = gridArray[3]
+  } else if (gridArray[6] === gridArray[7] && gridArray[7] === gridArray[8]) {
+    winner = gridArray[6]
+  } else if (gridArray[0] === gridArray[3] && gridArray[3] === gridArray[6]) {
+    winner = gridArray[0]
+  } else if (gridArray[1] === gridArray[4] && gridArray[4] === gridArray[7]) {
+    winner = gridArray[1]
+  } else if (gridArray[2] === gridArray[5] && gridArray[5] === gridArray[8]) {
+    winner = gridArray[2]
+  } else if (gridArray[0] === gridArray[4] && gridArray[4] === gridArray[8]) {
+    winner = gridArray[0]
+  } else if (gridArray[2] === gridArray[4] && gridArray[4] === gridArray[6]) {
+    winner = gridArray[2]
+  } else {
+    winner = 'it\'s a draw'
+  }
+}
+
+function isGameOver() {
+  if (winner === "x" || winner === "o") {
+    document.getElementById('game-status').innerHTML = 'winner is: ' + winner
+  } else if (!gridArray.includes(0)){
+    document.getElementById('game-status').innerHTML = 'it\'s a draw!'
+  }
+} //why is this code responsible for pushing out O?
+
+
+// DOM manipulation
+var grids = document.querySelectorAll('td.cell')
+
+for (var i = 0; i < grids.length; i++) {
+grids[i].addEventListener('click', playerMove)
+}
+
+
+// checkWinner()
+// isGameover()
+//
+// gridArray
+//
+// DOM. textContent
+// DOM. event.target
+// DOM. addEventListener
+//
+// GameLogic.
+//
+// if statement
+// function 1) okayer nive
+// 2)check winner
+// 3) is game over
+
 
 // var player1 = "x";
 // var player2 ="o";
@@ -34,40 +120,6 @@ console.log('Hello Frontend!');
 // }
 // }
 
-function click() {
-    if (this.id == "cell1") {
-        document.getElementById("cell1").innerHTML = "X";
-    } else if (this.id == "cell2") {
-        document.getElementById("cell2").innerHTML = "X";
-    } else if (this.id == "cell3") {
-        document.getElementById("cell3").innerHTML = "X";
-
-    } else if (this.id == "cell4") {
-        document.getElementById("cell4").innerHTML = "X";
-    } else if (this.id == "cell5") {
-        document.getElementById("cell5").innerHTML = "X";
-    } else if (this.id == "cell6") {
-        document.getElementById("cell6").innerHTML = "X";
-
-    } else if (this.id == "cell7") {
-        document.getElementById("cell7").innerHTML = "X";
-    } else if (this.id == "cell8") {
-        document.getElementById("cell8").innerHTML = "X";
-    } else if (this.id == "cell9") {
-        document.getElementById("cell9").innerHTML = "X";
-
-    }
-}
-
-document.getElementById("cell1").onclick = click;
-document.getElementById("cell2").onclick = click;
-document.getElementById("cell3").onclick = click;
-document.getElementById("cell4").onclick = click;
-document.getElementById("cell5").onclick = click;
-document.getElementById("cell6").onclick = click;
-document.getElementById("cell7").onclick = click;
-document.getElementById("cell8").onclick = click;
-document.getElementById("cell9").onclick = click;
 
 // function gameOver () = {
 //
